@@ -1,0 +1,16 @@
+String nomeVendedor = 'João Cleber de Souza'.toUpperCase();
+Integer quantCarrosVendidos = 5; 
+Decimal valorTotalDeVendas = 50000.00;
+Decimal salarioFixo = 4500.00;
+Decimal valorPorCarro = 200.00;
+
+Decimal comissaoFixa = quantCarrosVendidos*valorPorCarro;
+Decimal comissaoPorcentual = (valorTotalDeVendas*3)/100;
+Decimal salarioFinal = salarioFixo+comissaoFixa+comissaoPorcentual;
+
+System.debug('Nome do vendedor: '+nomeVendedor);
+System.debug('Quantidade de Carros vendidos: '+quantCarrosVendidos);
+System.debug('Valor total de vendas: '+valorTotalDeVendas);
+System.debug('Valor de comissão das vendas(3%): '+comissaoPorcentual);
+System.debug('Comissão por carro vendido: '+comissaoFixa);
+System.debug('O salário final é: '+salarioFinal.setScale(2));
