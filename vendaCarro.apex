@@ -1,0 +1,11 @@
+System.debug('Simulando preço de venda...');
+Decimal custoFabrica = 49999.55; 
+String formatac1 = String.valueOf(custoFabrica.setScale(2)).replace('.', ',').replaceFirst('(\\d)(?=(\\d{3})+,)', '$1.');
+System.debug('O custo de fabrica é: '+formatac1);
+Decimal porcentagemDistribuidor = (custoFabrica*15)/100;
+Decimal porcentagemImpostos = (custoFabrica*30)/100;
+System.debug('Calculado taxas de distribuição e impostos...');
+Decimal valorFinal = custoFabrica+porcentagemDistribuidor+porcentagemImpostos;
+System.debug('Carregando valor final');
+String formatac = String.valueOf(valorFinal.setScale(2)).replace('.', ',').replaceFirst('(\\d)(?=(\\d{3})+,)', '$1.');
+System.debug('O valor de venda é: '+formatac);
